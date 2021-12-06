@@ -2,17 +2,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: solid 1px black; */
+  /* border: solid 1px black;  */
 }
 
 /*header*/
 nav{
-  padding: 0 5% 0 5%;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+  padding: 0 11% 0 11%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: lightgrey;
+  background-color: orange;
   a{
     margin: 0 0 0 20px;
     text-decoration: none;
@@ -36,6 +39,8 @@ nav{
 /*media querie para header responsive*/
 @media (max-width: 600px) {
   nav{
+    position: fixed;
+    z-index: 1;
     ul{
       background-color: grey;
       position: absolute;
@@ -71,12 +76,12 @@ main{
   position: relative;
   z-index: -2;
 
-  background-color: lightsalmon;
+  background-color: rgb(122, 191, 255);
   padding: 10px;
   section{
     margin: 10px;
     text-align: center;
-    height: 20vh;
+    height: 70vh;
     background-color: lightgray;
   }
 }
@@ -86,7 +91,7 @@ footer{
   position: relative;
   z-index: -2;
   
-  height: 180px;
+  height: 180vh;
   background-color: lightgrey;
   display: flex;
   flex-flow: row wrap;
