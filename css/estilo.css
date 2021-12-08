@@ -3,15 +3,31 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /* border: solid 1px black;  */
+  /* border: solid 1px orange;      */
+}
+
+body {
+  font-family: 'Arimo', sans-serif;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body main {
+  margin-top: 50px;
 }
 
 /*header*/
 nav {
+  border-bottom: solid 1px #302e2e;
+  background-color: white;
   position: fixed;
   z-index: 1;
   width: 100vw;
-  padding: 0 11% 0 11%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,15 +38,24 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 50px;
-  background-color: orange;
 }
 
 nav a {
-  margin: 0 0 0 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 0 0 10px;
   text-decoration: none;
 }
 
+nav a img {
+  padding-top: 5px;
+  display: inline-block;
+  width: 140px;
+}
+
 nav ul {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,6 +63,8 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin: 0 20px 0 0;
 }
 
@@ -52,17 +79,18 @@ nav ul li a {
 
 nav .fa-bars {
   display: none;
+  margin-right: 13px;
 }
 
 /*media querie para header responsive*/
 @media (max-width: 600px) {
   nav {
-    position: fixed;
-    z-index: 1;
+    top: 0;
     /*agrego clase nueva en css para usar en js, es el toggle*/
   }
   nav ul {
-    background-color: grey;
+    background-color: white;
+    border-bottom: solid 1px #302e2e;
     position: absolute;
     top: 50px;
     left: 0;
@@ -78,7 +106,7 @@ nav .fa-bars {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: -200%;
+    margin-top: -250%;
     -webkit-transition: margin-top 0.5s;
     transition: margin-top 0.5s;
     z-index: -1;
@@ -87,6 +115,18 @@ nav .fa-bars {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    display: inline-block;
+    width: 100%;
+    padding-left: 15px;
+  }
+  nav li a {
+    display: block;
+  }
+  nav li a:hover {
+    color: red;
+    padding-left: 30px;
+    -webkit-transition: .6s;
+    transition: .6s;
   }
   nav .fa-bars {
     text-align: center;
@@ -103,7 +143,6 @@ nav .fa-bars {
 main {
   position: relative;
   z-index: -2;
-  background-color: #7abfff;
   padding: 10px;
 }
 
@@ -111,7 +150,6 @@ main section {
   margin: 10px;
   text-align: center;
   height: 70vh;
-  background-color: lightgray;
 }
 
 /*footer*/
@@ -119,7 +157,6 @@ footer {
   position: relative;
   z-index: -2;
   height: 180vh;
-  background-color: lightgrey;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

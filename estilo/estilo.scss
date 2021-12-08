@@ -2,27 +2,48 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: solid 1px black;  */
+  /* border: solid 1px orange;      */ 
+}
+
+body{
+  font-family: 'Arimo', sans-serif;
+  a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  main{
+    margin-top: 50px;
+  }
 }
 
 /*header*/
 nav{
+  border-bottom:solid 1px rgb(48, 46, 46);
+  background-color: white;
   position: fixed;
   z-index: 1;
   width: 100vw;
-  padding: 0 11% 0 11%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  background-color: orange;
   a{
-    margin: 0 0 0 20px;
+    height: fit-content;
+    margin: 0 0 0 10px;
     text-decoration: none;
+    img{
+      padding-top: 5px;
+      display: inline-block;
+      width: 140px;
+    }
   }
   ul{
+    width: 60%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
     margin: 0 20px 0 0;
     li{
       margin: 0 5px 0 0;
@@ -34,15 +55,16 @@ nav{
   }
   .fa-bars{
     display: none;
+    margin-right: 13px;
   }
 }
 /*media querie para header responsive*/
 @media (max-width: 600px) {
   nav{
-    position: fixed;
-    z-index: 1;
+    top: 0;
     ul{
-      background-color: grey;
+      background-color: white;
+      border-bottom: solid 1px rgb(48, 46, 46) ;
       position: absolute;
       top: 50px;
       left: 0;
@@ -51,12 +73,23 @@ nav{
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      margin-top: -200%;
+      margin-top: -250%;
       transition: margin-top 0.5s;
       z-index: -1;
     }
     li{
       height: fit-content;
+      display: inline-block;
+      width: 100%;
+      padding-left: 15px;
+      a{
+        display: block;
+      }
+      a:hover{
+        color: red;
+        padding-left: 30px;
+        transition: .6s;
+      }
     }
       .fa-bars{
         text-align: center;
@@ -76,13 +109,11 @@ main{
   position: relative;
   z-index: -2;
 
-  background-color: rgb(122, 191, 255);
   padding: 10px;
   section{
     margin: 10px;
     text-align: center;
     height: 70vh;
-    background-color: lightgray;
   }
 }
 
@@ -92,7 +123,6 @@ footer{
   z-index: -2;
   
   height: 180vh;
-  background-color: lightgrey;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
